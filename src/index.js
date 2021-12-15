@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import Feelings from "./routes/feelings";
+import Feeling from "./routes/feeling";
 import Needs from "./routes/needs";
 
 const rootElement = document.getElementById("root");
@@ -14,7 +15,9 @@ render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="needs" element={<Needs />} />
-        <Route path="feelings" element={<Feelings />} />
+        <Route path="feelings" element={<Feelings />}>
+          <Route path=":feelingId" element={<Feeling />} />
+        </Route>
         <Route
           path="*"
           element={

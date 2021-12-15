@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { getFeelings } from "../allNeeds";
 
 export default function Feelings() {
@@ -22,7 +22,7 @@ export default function Feelings() {
           </Link>
         ))}
       </nav>
-      <h2>Feelings</h2>
+      <Outlet />
     </div>
   );
 }
