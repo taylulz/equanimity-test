@@ -15,6 +15,14 @@ render(
       <Route path="/" element={<App />}>
         <Route path="needs" element={<Needs />} />
         <Route path="feelings" element={<Feelings />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>no match route</p>
+            </main>
+          }
+        />
       </Route>
     </Routes>
   </BrowserRouter>,
