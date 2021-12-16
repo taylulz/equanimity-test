@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { getFeelings } from "../allNeeds";
 
 export default function Feelings() {
@@ -13,13 +13,20 @@ export default function Feelings() {
         }}
       >
         {feelings.map(feeling => (
-          <Link
-            style={{ display: "block", margin: "1rem 0" }}
+          <NavLink
+            className={({ isActive }) => isActive ? "active" : ""}
+            style={({ isActive }) => {
+              return { 
+                display: "block", 
+                margin: "1rem 0",
+                color: isActive? "red" : ""
+              };
+            }}
             to={`/feelings/${feeling.name}`}
             key={feeling.name}
           >
             {feeling.name}
-          </Link>
+          </NavLink>
         ))}
       </nav>
       <Outlet />

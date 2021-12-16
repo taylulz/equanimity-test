@@ -16,7 +16,7 @@ let feelings = [
   },
   {
     category: "Affectionate",
-    name: "open hearted",
+    name: "open_hearted",
     areNeedsMet: true
   },
   {
@@ -335,7 +335,7 @@ let feelings = [
   },
   {
     category: "Peaceful",
-    name: "clear headed",
+    name: "clear_headed",
     areNeedsMet: true
   },
   {
@@ -1236,7 +1236,7 @@ let feelings = [
   },
   {
     category: "Tense",
-    name: "stressed out",
+    name: "stressed_out",
     areNeedsMet: false
   },
    ////////////////////////////////////////////////

@@ -16,6 +16,14 @@ render(
       <Route path="/" element={<App />}>
         <Route path="needs" element={<Needs />} />
         <Route path="feelings" element={<Feelings />}>
+          <Route 
+            index
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>Index Route: select a feeling</p>
+              </main>
+            }
+          />
           <Route path=":feelingId" element={<Feeling />} />
         </Route>
         <Route
