@@ -6,9 +6,9 @@ export default function Feeling() {
   let feeling = getFeeling(params.feelingId, 10)
   return (
     <main style={{ padding: "1rem" }}>
-      <h2>{feeling.category}</h2>
+      <h2>Feeling Category: <span>{feeling.category}</span></h2>
       <p>
-        {feeling.name}: {feeling.areNeedsMet == true ? <p>feeling when needs are met</p> : <p>feeling when needs are not met</p>}
+        {feeling.name} {feeling.areNeedsMet === true ? <p>feeling when needs are met</p> : <p>feeling when needs are not met</p>}
       </p>
     </main>
   );
